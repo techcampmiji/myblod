@@ -1,0 +1,14 @@
+<%= render partial: "header" %>
+
+<div class = "article" id = "article">
+  <% @articles.each do |article| %>
+    <div class = "contents">
+      <div class = "text"><%= simple_format(article.text) %></div>
+      <div class = "links">
+        <div class = "link"><%=link_to 'SHOW', "/articles/#{article.id}" ,method: :get%></div> 
+        <div class = "link"><%=link_to 'EDIT', "/articles/#{article.id}/edit", method: :get %></div>
+        <div class = "link"><%=link_to 'DELETE',"/articles/#{article.id}", method: :delete %></div>
+      </div>
+    </div>
+  <% end %>
+</div>

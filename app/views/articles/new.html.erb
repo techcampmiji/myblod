@@ -1,0 +1,13 @@
+<!-- header部分の呼び出し -->
+<%= render partial: "header" %>
+
+<div class="form">
+  <%= form_tag('/articles', method: :post) do %>
+    <ul>
+      <h3>New Article</h3>
+      <li><input type="text" name="nickname"placeholder="name"></li>
+      <li><textarea name="text"placeholder="text" rows="20" cols="40"></textarea></li>
+      <li><input type="submit" value="SENT"></li>
+    </ul>
+  <% end %>
+</div>
